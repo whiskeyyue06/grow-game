@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GROW / A Living System</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain"></div>
+<div class="app-shell">
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-symbol">✳</span><span><b>GROW</b><small>A LIVING SYSTEM</small></span></a>
+    <div class="header-right"><span class="system-status"><i></i> SYSTEM ONLINE</span><label class="jump-control">SEASON <select id="seasonSelect" aria-label="Choose season"><option value="SPRING">SPRING — ACTIVE GROWTH</option><option value="SUMMER">SUMMER — HIGH ENERGY</option><option value="AUTUMN">AUTUMN — PREPARATION</option><option value="WINTER">WINTER — DORMANCY</option></select></label><label class="jump-control">DAY <select id="daySelect" aria-label="Choose day"><option value="">AUTO — NEXT DAY</option><option value="1">01 — GERMINATION</option><option value="2">02 — FIRST LEAF</option><option value="3">03 — ROOTING</option><option value="4">04 — CANOPY</option><option value="5">05 — WEATHER TEST</option><option value="6">06 — FLOWERING</option><option value="7">07 — HARVEST</option></select></label><button class="about-trigger" id="aboutButton">ABOUT GAME</button><button class="reset" id="resetButton">RESET ↺</button></div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="kicker">BIOLOGY / FEEDBACK / EXPERIMENT 01</p>
+        <h1>Make it<br><span>thrive.</span></h1>
+        <p class="hero-lede">A plant is not a checklist.<br>It is a living system that answers every decision.</p>
+        <div class="hero-stamp"><span>7</span><div><b>DAYS TO GROW</b><small>Can you find the balance?</small></div></div>
+        <div class="time-controls" aria-label="Advance time"><button class="hero-advance" data-days="1" id="heroAdvanceButton">+1 DAY <b>↗</b></button><button class="time-option" data-days="3">+3 DAYS</button><button class="time-option" data-days="7">+7 DAYS</button></div>
+      </div>
+      <div class="specimen-wrap">
+        <div class="specimen-label"><span>LIVE SPECIMEN // 001</span><span id="dayLabel">DAY 01 — SPRING</span></div>
+        <div class="specimen" id="plantStage">
+          <div class="season-tag" id="seasonTag">SPRING / ACTIVE GROWTH</div><div class="grid-lines"></div><div class="sun" id="sunOrb">☼</div><div class="season-particles" id="seasonParticles"></div>
+          <div class="weather-cloud one"></div><div class="weather-cloud two"></div>
+          <div class="plant organic-plant" id="plant"><svg viewBox="0 0 300 460" role="img" aria-label="A growing plant"><defs><linearGradient id="stemGradient" x1="0" x2="1"><stop offset="0" stop-color="#24583d"/><stop offset=".48" stop-color="#579665"/><stop offset="1" stop-color="#1e4935"/></linearGradient><linearGradient id="leafGradient" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2d6848"/><stop offset=".55" stop-color="#79b968"/><stop offset="1" stop-color="#c4e387"/></linearGradient><linearGradient id="leafShadow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a7d67b"/><stop offset="1" stop-color="#2d6848"/></linearGradient><filter id="plantSoft"><feGaussianBlur stdDeviation=".25"/></filter></defs><g class="organic-sway"><path class="o-root" d="M150 400 C146 421 125 430 111 449 M151 402 C158 424 181 432 198 450 M149 402 C143 428 142 441 145 458 M155 405 C169 421 205 424 221 440"/><path class="o-stem" d="M151 407 C145 348 155 295 147 247 C141 203 153 146 166 76"/><path class="o-branch" d="M150 318 C125 293 99 278 67 273"/><path class="o-branch" d="M151 270 C178 244 204 227 237 218"/><path class="o-branch" d="M148 219 C124 196 102 180 79 170"/><path class="o-branch" d="M157 167 C180 145 199 131 220 119"/><g class="o-leaf leaf-a"><path d="M72 276 C38 279 18 259 14 232 C45 229 70 239 83 260 C84 267 80 273 72 276Z" fill="url(#leafGradient)"/><path class="vein" d="M22 242 C43 247 61 256 79 266"/></g><g class="o-leaf leaf-b"><path d="M230 221 C265 220 283 198 285 171 C253 173 230 188 218 208 C218 215 222 220 230 221Z" fill="url(#leafShadow)"/><path class="vein" d="M276 183 C255 193 239 204 221 214"/></g><g class="o-leaf leaf-c"><path d="M79 173 C45 164 30 139 35 113 C65 118 85 135 94 157 C94 165 89 170 79 173Z" fill="url(#leafShadow)"/><path class="vein" d="M43 123 C60 138 75 151 89 164"/></g><g class="o-leaf leaf-d"><path d="M218 122 C249 112 264 88 257 65 C229 71 211 87 203 108 C204 115 209 120 218 122Z" fill="url(#leafGradient)"/><path class="vein" d="M247 75 C229 88 215 101 207 114"/></g><g class="o-leaf leaf-e"><path d="M166 80 C147 54 151 28 169 8 C188 29 190 53 177 76 C174 82 170 83 166 80Z" fill="url(#leafGradient)"/><path class="vein" d="M171 17 C171 39 171 57 171 75"/></g><g class="o-bud"><path d="M161 64 C144 53 143 35 156 22 C172 32 176 48 166 62Z" fill="#e9b562"/><path d="M164 62 C176 46 190 43 201 53 C190 67 177 71 164 62Z" fill="#ee895e"/></g></g></svg></div>
+          <div class="ground"><span></span><i></i><i></i><i></i></div>
+          <div class="specimen-readout"><b id="plantMood">STABLE GROWTH</b><span id="growthLabel">SEEDLING / 12%</span></div>
+        </div>
+        <div class="vitals"><div><span>ROOTS</span><b id="rootReading">HEALTHY</b></div><div><span>LEAVES</span><b id="leafReading">OPEN</b></div><div><span>SOIL</span><b id="soilReading">MOIST</b></div></div>
+      </div>
+      <div class="corner-controls" aria-label="Plant controls">
+        <button class="corner-control water-control" data-control="water" aria-label="Open water control"><span class="control-glyph">≈</span><span><b>WATER</b><small>MOISTURE</small></span><em>↗</em></button>
+        <button class="corner-control light-control" data-control="light" aria-label="Open light control"><span class="control-glyph">☼</span><span><b>LIGHT</b><small>EXPOSURE</small></span><em>↗</em></button>
+        <button class="corner-control temp-control" data-control="temp" aria-label="Open temperature control"><span class="control-glyph">°</span><span><b>TEMPERATURE</b><small>GREENHOUSE AIR</small></span><em>↗</em></button>
+        <button class="corner-control nutrient-control" data-control="nutrient" aria-label="Open nutrient control"><span class="control-glyph">✦</span><span><b>NUTRIENTS</b><small>SOIL FEED</small></span><em>↗</em></button>
+      </div>
+      <div class="floating-data" id="floatingData" aria-label="Growth data"><div class="float-title"><span>SPECIMEN 001</span><i>LIVE</i></div><div class="float-day"><span id="floatDay">DAY 01</span><b id="floatSeason">SPRING</b></div><div class="float-stats"><div><span>GROWTH</span><b id="floatGrowth">12%</b></div><div><span>HEALTH</span><b id="floatHealth">82</b></div><div><span>STRESS</span><b id="floatStress">18</b></div></div><div class="float-signal"><i></i><span id="floatSignal">STABLE GROWTH</span></div></div>
+      <div class="control-drawer" id="controlDrawer" aria-hidden="true"><button class="drawer-close" id="drawerClose" aria-label="Close control">×</button><span class="drawer-kicker" id="drawerKicker">ENVIRONMENT</span><h3 id="drawerTitle">Water</h3><p id="drawerDescription">Set a target. The plant will adapt gradually.</p><input id="drawerRange" type="range" min="0" max="100" value="58"><output id="drawerValue">58%</output><div class="drawer-scale"><span>LOW</span><span>HIGH</span></div></div>
+    </section>
+
+    <section class="workspace">
+      <div class="controls panel">
+        <div class="section-head"><div><p class="kicker">YOUR VARIABLES</p><h2>Change the conditions.</h2></div><div class="auto-badge"><span class="pulse"></span><b>AUTO-TIME</b><small>ADVANCE WHEN READY</small></div></div>
+        <p class="hint">Adjust only when the plant needs it. Or leave everything alone and let time do the growing.</p>
+        <div class="dials">
+          <div class="dial-row"><div class="dial-icon blue">≈</div><div class="dial-copy"><b>WATER</b><small>MOISTURE IN SOIL</small></div><input id="waterSlider" aria-label="Water" type="range" min="0" max="100" value="58"><output id="waterValue">58%</output></div>
+          <div class="dial-row"><div class="dial-icon yellow">☼</div><div class="dial-copy"><b>LIGHT</b><small>DAILY EXPOSURE</small></div><input id="lightSlider" aria-label="Light" type="range" min="0" max="100" value="68"><output id="lightValue">68%</output></div>
+          <div class="dial-row"><div class="dial-icon red">°</div><div class="dial-copy"><b>TEMPERATURE</b><small>GREENHOUSE AIR</small></div><input id="tempSlider" aria-label="Temperature" type="range" min="10" max="38" value="26"><output id="tempValue">26°</output></div>
+          <div class="dial-row"><div class="dial-icon green">✦</div><div class="dial-copy"><b>NUTRIENTS</b><small>SOIL CONCENTRATION</small></div><input id="nutrientSlider" aria-label="Nutrients" type="range" min="0" max="100" value="52"><output id="nutrientValue">52%</output></div>
+        </div>
+        <div class="control-foot"><span>No action is required.<br>Changes settle gradually over time.</span><span class="auto-note"><i></i> Time advances only when you choose.</span></div>
+      </div>
+      <aside class="insights panel">
+        <div class="section-head"><div><p class="kicker">PLANT SIGNALS</p><h2>Read the response.</h2></div><span class="live">● LIVE</span></div>
+        <div class="signal" id="signalCard"><div class="signal-mark" id="signalIcon">✦</div><div><b id="signalTitle">Everything is in range.</b><p id="signalText">Push time forward and watch the feedback.</p></div></div>
+        <div class="metrics"><div class="metric"><span>GROWTH RATE</span><b id="growthScore">12</b><div><i id="growthBar"></i></div></div><div class="metric"><span>PLANT HEALTH</span><b id="healthScore">82</b><div><i id="healthBar"></i></div></div><div class="metric stress"><span>SYSTEM STRESS</span><b id="stressScore">18</b><div><i id="stressBar"></i></div></div></div>
+        <div class="journal"><div class="journal-head"><b>FIELD NOTES</b><span id="journalCount">01 / 07</span></div><div id="journalList"></div></div>
+      </aside>
+    </section>
+    <section class="challenge panel"><div><p class="kicker">CURRENT MISSION</p><h2>Keep the system in balance.</h2><p>Grow four healthy leaves in seven days. No shortcuts. No perfect answer.</p></div><div class="mission-progress"><div><span>PROGRESS</span><b><span id="challengeDay">1</span> / 7 DAYS</b></div><div class="track"><i id="challengeBar"></i></div><small id="challengeNote">Six days left. Tomorrow is shaped today.</small></div></section>
+  </main>
+  <footer><span>STEM / BIOLOGY / SYSTEM THINKING</span><span>OBSERVE → ADJUST → ADAPT</span></footer>
+</div>
+
+<div class="about-modal" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+  <div class="about-backdrop" id="aboutBackdrop"></div>
+  <article class="about-card">
+    <button class="about-close" id="aboutClose" aria-label="Close about game">×</button>
+    <div class="about-topline"><span>GROW / A LIVING SYSTEM</span><span>STEM GAME 01</span></div>
+    <p class="kicker">ABOUT THE GAME</p>
+    <h2 id="aboutTitle">A plant is not a checklist.<br><em>It is a living system.</em></h2>
+    <p class="about-intro">Grow a plant by observing its signals and shaping its environment. There is no instant “correct answer”: your choices settle gradually, and the plant responds over time.</p>
+    <div class="about-columns">
+      <section><span class="about-number">01</span><h3>YOUR GOAL</h3><p>Keep the system in balance and grow four healthy leaves within seven days.</p></section>
+      <section><span class="about-number">02</span><h3>HOW TO PLAY</h3><p>Adjust water, light, temperature, or nutrients when the plant needs it. You may also leave everything alone.</p></section>
+      <section><span class="about-number">03</span><h3>LET TIME PASS</h3><p>Press <b>LET ONE DAY PASS</b>. The environment and plant change gradually, not instantly.</p></section>
+      <section><span class="about-number">04</span><h3>READ THE SIGNALS</h3><p>Use the leaves, roots, soil, health, and growth rate to infer what is happening.</p></section>
+    </div>
+    <div class="about-stem"><span>STEM TOPIC</span><b>PLANT GROWTH</b><span>STEM BRANCH</span><b>SCIENCE / BIOLOGY</b></div>
+    <div class="about-outcomes"><span>LEARNING OUTCOMES</span><p>01 / Identify how water, light, temperature, and nutrients affect plant growth.</p><p>02 / Explain how changing one environmental factor can influence plant health over time.</p><p>03 / Use observation and cause-and-effect reasoning to adjust a changing biological system.</p></div>
+    <button class="about-start" id="aboutStart">START GROWING <b>↗</b></button>
+  </article>
+</div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
