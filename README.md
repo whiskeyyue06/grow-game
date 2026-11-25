@@ -16,11 +16,10 @@ The game includes seasonal environments, gradual plant development, health feedb
 
 ## Learning Outcomes
 
-Players will be able to:
-
-1. Identify how water, light, temperature, and nutrients affect plant growth.
-2. Explain how changing one environmental factor can influence plant health over time.
-3. Use observation and cause-and-effect reasoning to adjust a changing biological system.
+- **A — Audience:** Students.
+- **B — Behavior:** Identify how water, light, temperature, and nutrients affect plant growth.
+- **C — Condition:** After observing plant signals and adjusting one environmental variable in the simulation.
+- **D — Degree:** Correctly explain at least 3 relationships and maintain plant health at 60 or above during a 7-day simulation.
 
 ## Run Locally
 
